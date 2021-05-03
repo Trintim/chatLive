@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Ubuntu:wght@500&display=swap);
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; overflow: hidden; }
+
+/*body {
+    text-shadow: 0 0 1px #000, 0 0 2px #000;
+    background: {background_color};
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: {font_size};
+    line-height: 1.5em;
+    color: {text_color};
+}*/
+
+body {
+    background: transparent;
+    line-height: 1.5em;
+    color: #fff;
+}
+/*.top-degrade{position: absolute; width: 100%; height: 25px; top: 0; left: 0; background: rgb(17,11,44);
+    background: linear-gradient(180deg, rgba(17,11,44,1) 0%, rgba(17,11,44,0) 100%); z-index: 2;}
+
+.bottom-degrade{position: absolute; width: 100%; height: 25px; bottom: 0; left: 0; background: rgb(17,11,44);
+    background: linear-gradient(180deg, rgba(17,11,44,0) 0%, rgba(17,11,44,1) 100%); z-index: 2;}
+*/
+/*#log>div {
+    animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+    -webkit-animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+}*/
+#log>div{position: relative; padding-top: 21px; margin-bottom: 10px;}
+#log>div { animation: fadeInUp .3s ease forwards, fadeOut 0.5s ease 0 forwards;
+    -webkit-animation: fadeInUp .3s ease forwards, fadeOut 0.5s ease 0 forwards;
+}
+
+.colon {
+    display: none;
+}
+
+/* #log {
+    display: table;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px 10px;
+    width: 100%;
+    table-layout: fixed;
+}
+
+#log>div {
+    display: table-row;
+}
+
+#log>div.deleted {
+    visibility: hidden;
+}
+
+#log .emote {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0.4em 0.2em;
+    position: relative;
+}
+
+#log .emote img {
+    display: inline-block;
+    height: 1em;
+    opacity: 0;
+}
+
+#log .message,#log .meta {
+    vertical-align: top;
+    display: table-cell;
+    padding-bottom: 0.1em;
+}
+
+#log .meta {
+    width: 35%;
+    text-align: right;
+    padding-right: 0.5em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#log .message {
+    word-wrap: break-word;
+    width: 65%;
+}
+
+.badge {
+    display: inline-block;
+    margin-right: 0.2em;
+    position: relative;
+    height: 1em;
+    vertical-align: middle;
+    top: -0.1em;
+}
+
+.name {
+    margin-left: 0.2em;
+} */
+#log {position:absolute; width: 100%; bottom: 0; left: 0; padding: 0 10px 10px;}
+
+#log>div.deleted { visibility: hidden;}
+/* ====Username==== */
+#log .meta {position: absolute; top: 0; left: 10px; padding: 9px 14px; line-height: 15px; border-radius: 8px; z-index: 1;
+    font-family: 'Merriweather'; font-size: 14px; font-weight: 900;}
+    #log .meta .badges {float: left; margin-right: 10px;}
+        #log .meta .badges > img { width: 18px; height: 18px; margin-right: 5px;}
+            #log .meta .badges > img:last-child {margin-right: 0;}
+    #log .meta .name {float: left; line-height: 21px;}
+/* ====Username message==== */
+#log .message{position: relative; min-height: 20px; }
+    #log .message .container-message {padding: 20px 18px 15px 18px; border: 2px solid #3a2fda; border-radius: 0 10px 10px 10px; display: inline-block;
+        font-family: 'Ubuntu'; font-size: 18px; word-break: break-word;}
+        #log .message .container-message .emote {background-image: none !important;}
+        #log .message .container-message .emote img {max-width: 25px;}
+
+
